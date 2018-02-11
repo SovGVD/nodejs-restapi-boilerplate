@@ -13,7 +13,7 @@ Main config is inside `config/config.js`, following modules are manadatory:
  - `maintenance` - module/method for restart API threads and clear classes cache
 
 ## Authorization
-API support two method for authorization
+API support two methods for authorization.
 
 ### Bearer
 `curl -v -H "Authorization: Bearer hello" http://127.0.0.1:8081/demo/123/`
@@ -24,7 +24,7 @@ API support two method for authorization
 There is only one example method `/demo/:id/` that will return the same `ID` if it greater than zero or error. Example above.
 
 ## Restart API modules
-API modules (for ex. after update) could be restart without complete downtime of API server. To make this possible every thread shut down one by one and respawn again after clearing cache with modules.
+API modules (for ex. after update) could be restart without complete restart of API server. To make this possible every thread shut down one by one and respawn again after clearing cache with modules.
 
 `curl -v -H "Authorization: Bearer hello" http://127.0.0.1:8081/maintenance/restart/`
 
