@@ -1,7 +1,7 @@
 'use strict';
 
 const cluster = require('cluster');
-const doThreads = 1;//require('os').cpus().length;
+const doThreads = require('os').cpus().length;
 const clearModule = require('clear-module');
 
 // Possibly not a good place to init logger, it will init doThreads+1 times

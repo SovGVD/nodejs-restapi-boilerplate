@@ -4,7 +4,7 @@
 'use strict'
 
 var API_demoAPI = function () {
-	this.version="0.0.1";
+	this.version="0.0.2";
 	this.parent = false;
 
 	this.init = function (_parent, _config) {
@@ -38,7 +38,7 @@ var API_demoAPI = function () {
 		if (req.params.id>0) {
 			d.code = true;
 		} else {
-			d.errors.push({field:"ID", message:"ID must be great than zero `>0`"});
+			d.errors.push({field:"ID", message:"ID must be greater than zero"});
 		}
 		this.parent.APIsend(d);
 	}
